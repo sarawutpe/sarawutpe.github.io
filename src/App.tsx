@@ -1,16 +1,38 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import HomePage from "./HomePage";
+import PortfolioPage from "./PortfolioPage";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const Layout = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Outlet />
     </>
   );
-}
+};
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "portfolio",
+        element: <PortfolioPage />,
+      },
+      {
+        path: "portfolio/:project",
+        element: <PortfolioPage />,
+      },
+    ],
+  },
+]);
+
+const App: React.FC = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
