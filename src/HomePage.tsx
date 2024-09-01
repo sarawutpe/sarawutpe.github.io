@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
         <div className="block w-full bg-gray-600 p-4 lg:p-5 mb-2 lg:mb-6">
           <div className="flex flex-col justify-between lg:flex-row w-100 gap-6">
             <div className="flex items-center lg:flex-row gap-4">
-              {/* <img src="profile.jpg"   alt="profile" className="w-20 h-20 rounded-full" /> */}
+              <img src="profile.jpg"   alt="profile" className="w-20 h-20 rounded-full" />
               <div className="flex flex-col gap-2">
                 <h3 className="text-2xl text-white font-semibold tracking-tight">Sarawut Chompookheaw</h3>
                 <div className="flex gap-2">
@@ -205,21 +205,21 @@ const HomePage: React.FC = () => {
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://cityvariety.co.th" target="_blank">
-                        {/* <img src="company-cv.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cv.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://cityvariety.co.th" target="_blank">
-                        {/* <img src="company-cv-2.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cv-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://cityvariety.co.th" target="_blank">
-                        {/* <img src="company-cv-3.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cv-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
@@ -258,21 +258,21 @@ const HomePage: React.FC = () => {
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://www.codemobiles.com" target="_blank">
-                        {/* <img src="company-cm.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cm.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://www.codemobiles.com" target="_blank">
-                        {/* <img src="company-cm-2.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cm-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
                       <a href="https://www.codemobiles.com" target="_blank">
-                        {/* <img src="company-cm-3.png" alt="company" className="hover:scale-110 transition-all duration-300" /> */}
+                        <img src="company-cm-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                       </a>
                     </div>
                   </SwiperSlide>
@@ -320,7 +320,7 @@ const HomePage: React.FC = () => {
       </div>
 
       <CustomDialog isOpen={isOpen} onClose={toggleDialog} title="Resume">
-        {/* <img src="resume.jpg" alt="resume" className=" h-full" /> */}
+        <img src="resume.jpg" alt="resume" className=" h-full" />
       </CustomDialog>
     </>
   );

@@ -48,22 +48,22 @@ const Content: React.FC<ContentProps> = ({ content, onOpenLightbox }) => {
           .filter((portfolio) => portfolio.company === content)
           .map((data, index) => (
             <div key={index} onClick={() => onOpenLightbox(data.screenshots)} className="group p-2">
-              {/* <img src={data.thumbnail} alt="screenshot" className="w-full mb-2 rounded-xl overflow-hidden cursor-pointer transition hover:scale-105" /> */}
+              <img src={data.thumbnail} alt="screenshot" className="w-full mb-2 rounded-xl overflow-hidden cursor-pointer transition hover:scale-105" />
               <p className="text-lg text-center font-medium mb-1">{data.name}</p>
               <div className="flex justify-center gap-4">
                 {data.url && (
                   <a href={data.url} target="_blank">
-                    {/* <img src="/icon-world-wide-web.png" alt="world wide web" className="max-w-14 max-w-5" /> */}
+                    <img src="/icon-world-wide-web.png" alt="world wide web" className="max-w-14 max-w-5" />
                   </a>
                 )}
                 {data.androidUrl && (
                   <a href={data.androidUrl} target="_blank">
-                    {/* <img src="/icon-google-playstore.webp" alt="playstore" className="max-w-20 max-h-5" /> */}
+                    <img src="/icon-google-playstore.webp" alt="playstore" className="max-w-20 max-h-5" />
                   </a>
                 )}
                 {data.iOSUrl && (
                   <a href={data.iOSUrl} target="_blank">
-                    {/* <img src="/icon-ios-appstore.webp" alt="appstore" className="max-w-20 max-h-5" /> */}
+                    <img src="/icon-ios-appstore.webp" alt="appstore" className="max-w-20 max-h-5" />
                   </a>
                 )}
               </div>
