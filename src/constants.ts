@@ -31,7 +31,7 @@ export const portfolioes: Portfolio[] = [
     company: "cm",
     name: "POSPOSCO",
     thumbnail: "/posposco/thumbnail.png",
-    screenshots: ["/posposco/screen1.png", "/posposco/screen2.png"],
+    screenshots: ["/posposco/screen1.png", "/posposco/screen2.png", "/posposco/screen3.png", "/posposco/screen4.png"],
     url: "https://pospos.co",
   },
   {

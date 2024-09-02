@@ -70,21 +70,7 @@ const HomePage: React.FC = () => {
               <h3 className="font-bold tracking-tight text-zinc-800 lg:text-3xl dark:text-zinc-100">Portfolio</h3>
             </div>
             <div className="flex">
-              <div className="pointer-events-auto md:hidden" data-headlessui-state="">
-                <button
-                  className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
-                  type="button"
-                  aria-expanded="false"
-                  data-headlessui-state=""
-                  id="headlessui-popover-button-:Rbmiqja:"
-                >
-                  Menu
-                  <svg viewBox="0 0 8 6" aria-hidden="true" className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
-                    <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
-                  </svg>
-                </button>
-              </div>
-              <nav className="pointer-events-auto hidden md:block">
+              <nav className="pointer-events-auto block">
                 <ul className="flex px-3 text-sm font-medium text-zinc-800">
                   <li className="cursor-pointer">
                     <a href="tel:+66633505700">Contact Me</a>
@@ -98,7 +84,7 @@ const HomePage: React.FC = () => {
         <div className="block w-full bg-gray-600 p-4 lg:p-5 mb-2 lg:mb-6">
           <div className="flex flex-col justify-between lg:flex-row w-100 gap-6">
             <div className="flex items-center lg:flex-row gap-4">
-              <img src="profile.jpg"   alt="profile" className="w-20 h-20 rounded-full" />
+              <img src="profile.jpg" alt="profile" className="w-20 h-20 rounded-full" />
               <div className="flex flex-col gap-2">
                 <h3 className="text-2xl text-white font-semibold tracking-tight">Sarawut Chompookheaw</h3>
                 <div className="flex gap-2">
@@ -320,7 +306,7 @@ const HomePage: React.FC = () => {
       </div>
 
       <CustomDialog isOpen={isOpen} onClose={toggleDialog} title="Resume">
-        <img src="resume.jpg" alt="resume" className=" h-full" />
+        <img src="resume.jpg" alt="resume" className=" h-full object-contain" />
       </CustomDialog>
     </>
   );
