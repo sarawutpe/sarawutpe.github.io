@@ -6,11 +6,8 @@ import "swiper/css/pagination";
 import { useState } from "react";
 import CustomDialog from "./CustomDialog";
 import { useNavigate } from "react-router-dom";
-
-interface Devicons {
-  iconName: string;
-  name: string;
-}
+import { databaseStacks, frameworkStacks, programingLanguageStacks, toolStacks } from "./constants";
+import Typewriter from "typewriter-effect";
 
 const HomePage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,46 +16,6 @@ const HomePage: React.FC = () => {
   function toggleDialog() {
     setIsOpen((prev) => !prev);
   }
-
-  const programingLanguages: Devicons[] = [
-    { iconName: "devicon-html5-plain", name: "HTML" },
-    { iconName: "devicon-css3-plain", name: "CSS" },
-    { iconName: "devicon-javascript-plain", name: "JavaScript" },
-    { iconName: "devicon-typescript-plain", name: "TypeScript" },
-    { iconName: "devicon-php-plain", name: "PHP" },
-    { iconName: "devicon-dart-plain", name: "Dart" },
-    { iconName: "devicon-go-plain", name: "Golang" },
-    { iconName: "devicon-csharp-plain", name: "c#" },
-    { iconName: "devicon-python-plain", name: "Python" },
-  ];
-
-  const frameworks: Devicons[] = [
-    { iconName: "devicon-react-original", name: "React" },
-    { iconName: "devicon-angular-plain", name: "Angular" },
-    { iconName: "devicon-flutter-plain", name: "Flutter" },
-    { iconName: "devicon-laravel-original", name: "Laravel" },
-    { iconName: "devicon-express-original", name: "Express" },
-    { iconName: "devicon-nextjs-original-wordmark", name: "Next.js" },
-    { iconName: "devicon-nestjs-original", name: "NestJS" },
-    { iconName: "devicon-codeigniter-plain", name: "CodeIgniter" },
-    { iconName: "devicon-tailwindcss-original", name: "Tailwind CSS" },
-    { iconName: "devicon-bootstrap-plain", name: "Bootstrap" },
-    { iconName: "", name: "" },
-    { iconName: "", name: "" },
-    { iconName: "", name: "" },
-  ];
-
-  const databases: Devicons[] = [
-    { iconName: "devicon-mysql-original", name: "MySQL" },
-    { iconName: "devicon-postgresql-plain", name: "PostgreSQL" },
-    { iconName: "devicon-sqlite-plain", name: "SQLite" },
-    { iconName: "devicon-mongodb-plain", name: "MongoDB" },
-  ];
-
-  const tools: Devicons[] = [
-    { iconName: "devicon-git-plain", name: "Git" },
-    { iconName: "devicon-postman-plain", name: "Postman" },
-  ];
 
   return (
     <>
@@ -83,15 +40,37 @@ const HomePage: React.FC = () => {
         {/* Name */}
         <div className="block w-full bg-gray-600 p-4 lg:p-5 mb-2 lg:mb-6">
           <div className="flex flex-col justify-between lg:flex-row w-100 gap-6">
-            <div className="flex items-center lg:flex-row gap-4">
+            <div className="flex flex-1 items-center lg:flex-row gap-4">
               <img src="profile.jpg" alt="profile" className="w-20 h-20 rounded-full" />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-2xl text-white font-semibold tracking-tight">Sarawut Chompookheaw</h3>
-                <div className="flex gap-2">
+              <div className="flex flex-1 flex-col gap-2">
+                <h3 className="text-2xl text-white font-semibold tracking-tight">
+                  <Typewriter
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString("Hello, I'm Sarawut Chompookheaw")
+                        .pauseFor(2000)
+                        .deleteAll()
+                        .typeString("I am a Web Developer and Mobile Developer")
+                        .pauseFor(1500)
+                        .deleteAll()
+                        .typeString("I create dynamic web and mobile applications.")
+                        .pauseFor(1500)
+                        .deleteAll()
+                        .typeString("Let's build something amazing together!")
+                        .start();
+                    }}
+                    options={{
+                      loop: true, // Enable looping
+                      delay: 50, // Faster typing speed
+                      deleteSpeed: 50, // Faster delete speed
+                    }}
+                  />
+                </h3>
+                <div className="flex gap-2 max-w-max">
                   <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl">Web Developer</p>
                   <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl">Mobile Developer</p>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-2 max-w-max">
                   <a href="https://github.com/sarawutpe" className="group">
                     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-white transition group-hover:fill-zinc-300">
                       <path
@@ -137,7 +116,7 @@ const HomePage: React.FC = () => {
           <div className="mb-2">
             <p className="text-zinc-600 font-medium text-md">Programming Languages</p>
             <div className="flex gap-5 flex-wrap p-2 w-full">
-              {programingLanguages.map((item, index) => (
+              {programingLanguageStacks.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <i className={item.iconName} style={{ fontSize: 24 }}></i>
                   <p className="text-zinc-600 text-xs">{item.name}</p>
@@ -148,7 +127,7 @@ const HomePage: React.FC = () => {
           <div className="mb-2">
             <p className="text-zinc-600 font-medium text-md">Frameworks & Libraries</p>
             <div className="flex gap-5 flex-wrap p-2 w-full">
-              {frameworks.map((item, index) => (
+              {frameworkStacks.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <i className={item.iconName} style={{ fontSize: 24 }}></i>
                   <p className="text-zinc-600 text-xs">{item.name}</p>
@@ -159,7 +138,7 @@ const HomePage: React.FC = () => {
           <div className="mb-2">
             <p className="text-zinc-600 font-medium text-md">Databases</p>
             <div className="flex gap-5 flex-wrap p-2 w-full">
-              {databases.map((item, index) => (
+              {databaseStacks.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <i className={item.iconName} style={{ fontSize: 24 }}></i>
                   <p className="text-zinc-600 text-xs">{item.name}</p>
@@ -170,7 +149,7 @@ const HomePage: React.FC = () => {
           <div className="mb-2">
             <p className="text-zinc-600 font-medium text-md">Tools</p>
             <div className="flex gap-5 flex-wrap p-2 w-full">
-              {tools.map((item, index) => (
+              {toolStacks.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <i className={item.iconName} style={{ fontSize: 24 }}></i>
                   <p className="text-zinc-600 text-xs">{item.name}</p>
@@ -226,11 +205,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <button
                   onClick={() => navigate("/portfolio/cv")}
-                  className="w-full flex justify-between items-center border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-                  style={{ backgroundColor: "#5865F2" }}
+                  className="group w-full flex justify-between items-center border bg-blue-500 text-white hover:bg-blue-600 border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2"
                 >
                   <span>View Projects</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                  <svg className="transition group-hover:translate-x-1 size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>
@@ -280,11 +258,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <button
                   onClick={() => navigate("/portfolio/cm")}
-                  className="w-full flex justify-between items-center border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-                  style={{ backgroundColor: "#5865F2" }}
+                  className="group w-full flex justify-between items-center border bg-blue-500 text-white hover:bg-blue-600 border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2"
                 >
                   <span>View Projects</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                  <svg className="transition group-hover:translate-x-1 size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>

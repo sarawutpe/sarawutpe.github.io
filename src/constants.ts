@@ -1,3 +1,48 @@
+export interface Devicons {
+  iconName: string;
+  name: string;
+}
+
+export const programingLanguageStacks: Devicons[] = [
+  { iconName: "devicon-html5-plain", name: "HTML" },
+  { iconName: "devicon-css3-plain", name: "CSS" },
+  { iconName: "devicon-javascript-plain", name: "JavaScript" },
+  { iconName: "devicon-typescript-plain", name: "TypeScript" },
+  { iconName: "devicon-php-plain", name: "PHP" },
+  { iconName: "devicon-dart-plain", name: "Dart" },
+  { iconName: "devicon-go-plain", name: "Golang" },
+  { iconName: "devicon-csharp-plain", name: "c#" },
+  { iconName: "devicon-python-plain", name: "Python" },
+];
+
+export const frameworkStacks: Devicons[] = [
+  { iconName: "devicon-react-original", name: "React" },
+  { iconName: "devicon-angular-plain", name: "Angular" },
+  { iconName: "devicon-flutter-plain", name: "Flutter" },
+  { iconName: "devicon-laravel-original", name: "Laravel" },
+  { iconName: "devicon-express-original", name: "Express" },
+  { iconName: "devicon-nextjs-original-wordmark", name: "Next.js" },
+  { iconName: "devicon-nestjs-original", name: "NestJS" },
+  { iconName: "devicon-codeigniter-plain", name: "CodeIgniter" },
+  { iconName: "devicon-tailwindcss-original", name: "Tailwind CSS" },
+  { iconName: "devicon-bootstrap-plain", name: "Bootstrap" },
+  { iconName: "", name: "" },
+  { iconName: "", name: "" },
+  { iconName: "", name: "" },
+];
+
+export const databaseStacks: Devicons[] = [
+  { iconName: "devicon-mysql-original", name: "MySQL" },
+  { iconName: "devicon-postgresql-plain", name: "PostgreSQL" },
+  { iconName: "devicon-sqlite-plain", name: "SQLite" },
+  { iconName: "devicon-mongodb-plain", name: "MongoDB" },
+];
+
+export const toolStacks: Devicons[] = [
+  { iconName: "devicon-git-plain", name: "Git" },
+  { iconName: "devicon-postman-plain", name: "Postman" },
+];
+
 export type Company = "cv" | "cm";
 
 export interface Portfolio {

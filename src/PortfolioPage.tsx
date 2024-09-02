@@ -12,6 +12,7 @@ interface AppBarProps {
 const AppBar: React.FC<AppBarProps> = ({ pageNumber, title, onChangePage }) => {
   return (
     <div className="flex justify-between w-full pt-2 pb-4">
+      
       <div>
         <button onClick={() => onChangePage(1)} className="flex justify-center items-center w-10 h-10 rounded-full text-gray-500 hover:text-gray-700 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
