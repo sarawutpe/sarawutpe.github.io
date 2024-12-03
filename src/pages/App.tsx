@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import HomePage from "./HomePage";
-import PortfolioPage from "./PortfolioPage";
+import HomePage from '@pages/HomePage'
+import PortfolioPage from "@pages/PortfolioPage";
 
 const Layout = () => {
   return (
@@ -10,6 +10,7 @@ const Layout = () => {
     </>
   );
 };
+
 const router = createBrowserRouter([
   {
     path: "/",

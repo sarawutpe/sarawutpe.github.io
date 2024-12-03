@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import FsLightbox from "fslightbox-react";
-import { portfolioes, Company } from "./constants";
+import { portfolioes, Company } from "../utils/constants";
 
 interface AppBarProps {
   pageNumber: number;

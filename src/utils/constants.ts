@@ -134,3 +134,12 @@ export const portfolioes: Portfolio[] = [
     ],
   },
 ];
+
+export interface Shareds {
+  [key: string]: string;
+}
+
+export const shareds = {
+  resumeImg: "https://drive.google.com/file/d/1UAN3RP112t_pdIR8DNZSBFv0MXzQTHzQ/view?usp=sharing",
+  resumePDF: "https://drive.google.com/file/d/1IzVbGfTfmQq2g2rMY0-tUT4z6D688xS6/view?usp=sharing"
+};

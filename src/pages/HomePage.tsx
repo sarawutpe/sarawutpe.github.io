@@ -1,12 +1,12 @@
 import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./App.css";
+import "../App.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useState } from "react";
-import CustomDialog from "./CustomDialog";
+import CustomDialog from "../components/CustomDialog";
 import { useNavigate } from "react-router-dom";
-import { databaseStacks, frameworkStacks, programingLanguageStacks, toolStacks } from "./constants";
+import { databaseStacks, frameworkStacks, programingLanguageStacks, shareds, toolStacks } from "../utils/constants";
 import Typewriter from "typewriter-effect";
 
 const HomePage: React.FC = () => {
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
       <div className="block w-full max-w-7xl lg:px-8 mx-auto">
         {/* Nav */}
         <div className="w-full bg-white ring-1 ring-zinc-100 py-5">
-          <div className="flex w-full h-full justify-between p-2">
+          <div className="flex w-full h-full justify-between items-center p-2">
             <div className="flex flex-1">
               <h3 className="font-bold tracking-tight text-zinc-800 lg:text-3xl dark:text-zinc-100">Portfolio</h3>
             </div>
@@ -57,6 +57,7 @@ const HomePage: React.FC = () => {
                         .pauseFor(1500)
                         .deleteAll()
                         .typeString("Let's build something amazing together!")
+                        .pauseFor(1000)
                         .start();
                     }}
                     options={{
@@ -67,8 +68,8 @@ const HomePage: React.FC = () => {
                   />
                 </h3>
                 <div className="flex gap-2 max-w-max">
-                  <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl">Web Developer</p>
-                  <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl">Mobile Developer</p>
+                  <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl px-2">Web Developer</p>
+                  <p className="flex flex-1 justify-center text-sm bg-gray-800 text-white p-1 text-nowrap rounded-2xl px-2">Mobile Developer</p>
                 </div>
                 <div className="flex gap-2 max-w-max">
                   <a href="https://github.com/sarawutpe" className="group">
@@ -91,7 +92,7 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col gap-4">
               <a
                 className="inline-flex cursor-pointer items-center gap-2 justify-center rounded-2xl py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:text-zinc-500"
-                href="resume.pdf"
+                href={shareds.resumePDF}
                 target="_blank"
               >
                 Download CV
@@ -110,7 +111,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* Tech Stacks */}
         <div className="block w-full mb-2 lg:mb-6 p-4 lg:p-0">
-          <div className="border-l-4 border-slate-400 p-1 mb-2">
+          <div className="headless-title mb-2">
             <h4 className="font-medium tracking-tight text-zinc-800 lg:text-2xl dark:text-zinc-100 mb-1">Tech Stacks</h4>
           </div>
           <div className="mb-2">
@@ -160,7 +161,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* Experiences */}
         <div className="block w-full mb-2 lg:mb-6 p-4 lg:p-0">
-          <div className="border-l-4 border-slate-400 p-1 mb-2">
+          <div className="headless-title mb-2">
             <h4 className="font-medium tracking-tight text-zinc-800 lg:text-2xl dark:text-zinc-100 mb-1">Experiences</h4>
           </div>
           <div className="block mb-10">
@@ -281,9 +282,10 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
-
       <CustomDialog isOpen={isOpen} onClose={toggleDialog} title="Resume">
-        <img src="resume.jpg" alt="resume" className=" h-full object-contain" />
+        <div className="w-full h-[80vh]">
+          <iframe src="https://drive.google.com/file/d/1UAN3RP112t_pdIR8DNZSBFv0MXzQTHzQ/preview" width="100%" height="100%" allow="autoplay"></iframe>
+        </div>
       </CustomDialog>
     </>
   );
