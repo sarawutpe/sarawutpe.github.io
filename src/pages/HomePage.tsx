@@ -8,6 +8,7 @@ import CustomDialog from "../components/CustomDialog";
 import { useNavigate } from "react-router-dom";
 import { databaseStacks, frameworkStacks, programingLanguageStacks, shareds, toolStacks } from "../utils/constants";
 import Typewriter from "typewriter-effect";
+import codeSVG from "/code_24dp.svg";
 
 const HomePage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,8 @@ const HomePage: React.FC = () => {
         {/* Nav */}
         <div className="w-full bg-white ring-1 ring-zinc-100 py-5">
           <div className="flex w-full h-full justify-between items-center p-2">
-            <div className="flex flex-1">
+            <div className="flex items-center gap-1 flex-1">
+              <img src={codeSVG} alt="logo" width={40} />
               <h3 className="font-bold tracking-tight text-zinc-800 lg:text-3xl dark:text-zinc-100">Portfolio</h3>
             </div>
             <div className="flex">
@@ -48,9 +50,9 @@ const HomePage: React.FC = () => {
                     onInit={(typewriter) => {
                       typewriter
                         .typeString("Hello, I'm Sarawut Chompookheaw")
-                        .pauseFor(2000)
+                        .pauseFor(1500)
                         .deleteAll()
-                        .typeString("I am a Web Developer and Mobile Developer")
+                        .typeString("My 2 years+ experience in web and mobile app development.")
                         .pauseFor(1500)
                         .deleteAll()
                         .typeString("I create dynamic web and mobile applications.")
@@ -73,7 +75,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="flex gap-2 max-w-max">
                   <a href="https://github.com/sarawutpe" className="group">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-white transition group-hover:fill-zinc-300">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-white transition group-hover:fill-zinc-300">
                       <path
                         fillRule="evenodd"
                         clipRule="evenodd"
@@ -82,7 +84,7 @@ const HomePage: React.FC = () => {
                     </svg>
                   </a>
                   <a href="https://www.linkedin.com/in/sarawut-chompookheaw/" className="group">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6 fill-white transition group-hover:fill-zinc-300">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-8 w-8 fill-white transition group-hover:fill-zinc-300">
                       <path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"></path>
                     </svg>
                   </a>
@@ -169,25 +171,13 @@ const HomePage: React.FC = () => {
               <div className="flex w-full max-w-[600px]">
                 <Swiper style={{ width: "100%", height: "100%" }} pagination={{ clickable: true }} modules={[Pagination, Autoplay]} autoplay={{ delay: 3000 }} loop={true}>
                   <SwiperSlide>
-                    <div className="overflow-hidden">
-                      <a href="https://cityvariety.co.th" target="_blank">
-                        <img src="company-cv.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
-                    </div>
+                    <img src="company-cv.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="overflow-hidden">
-                      <a href="https://cityvariety.co.th" target="_blank">
-                        <img src="company-cv-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
-                    </div>
+                    <img src="company-cv-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="overflow-hidden">
-                      <a href="https://cityvariety.co.th" target="_blank">
-                        <img src="company-cv-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
-                    </div>
+                    <img src="company-cv-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -201,7 +191,12 @@ const HomePage: React.FC = () => {
                     <li className="list-disc">Job position: Programmer (Full-time)</li>
                     <li className="list-disc">Responsibilities: Develop website & mobile applications</li>
                     <li className="list-disc">Working period: July 2023 - Present</li>
-                    <li className="list-disc">Website: cityvariety.co.th</li>
+                    <li className="list-disc">
+                      Website:{" "}
+                      <a className="hover:text-blue-500" href="https://cityvariety.co.th/" target="_blank">
+                        cityvariety.co.th
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <button
@@ -222,23 +217,17 @@ const HomePage: React.FC = () => {
                 <Swiper style={{ width: "100%", height: "100%" }} pagination={{ clickable: true }} modules={[Pagination, Autoplay]} autoplay={{ delay: 3000 }} loop={true}>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <a href="https://www.codemobiles.com" target="_blank">
-                        <img src="company-cm.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
+                      <img src="company-cm.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <a href="https://www.codemobiles.com" target="_blank">
-                        <img src="company-cm-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
+                      <img src="company-cm-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <a href="https://www.codemobiles.com" target="_blank">
-                        <img src="company-cm-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
-                      </a>
+                      <img src="company-cm-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                 </Swiper>
@@ -254,7 +243,12 @@ const HomePage: React.FC = () => {
                     <li className="list-disc">Job position: Web developer (Full-time)</li>
                     <li className="list-disc">Responsibilities: Develop website & mobile applications</li>
                     <li className="list-disc">Working period: April 2023</li>
-                    <li className="list-disc">Website: www.codemobiles.com</li>
+                    <li className="list-disc">
+                      Website:{" "}
+                      <a className="hover:text-blue-500" href="https://www.codemobiles.com/" target="_blank">
+                        www.codemobiles.com
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <button
@@ -274,8 +268,7 @@ const HomePage: React.FC = () => {
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <div className="relative px-4 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
-              <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
-                <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">&nbsp;</div>
+              <div className="flex justify-center">
                 <p className="text-sm text-zinc-400 dark:text-zinc-500">© sarawutpe.github.io</p>
               </div>
             </div>

@@ -44,12 +44,11 @@ export const toolStacks: Devicons[] = [
 ];
 
 export type Company = "cv" | "cm";
-
+export const companyList = ["cv", "cm"];
 export interface Portfolio {
   company: Company;
   name: string;
-  desc?: string;
-  thumbnail: string;
+  desc: string;
   screenshots: string[];
   url?: string;
   iOSUrl?: string;
@@ -60,30 +59,49 @@ export const portfolioes: Portfolio[] = [
   {
     company: "cm",
     name: "Hrzoft App",
-    thumbnail: "/app-hrzoft/thumbnail.png",
-    screenshots: ["/app-hrzoft/screen1.png", "/app-hrzoft/screen2.png", "/app-hrzoft/screen3.png", "/app-hrzoft/screen4.png", "/app-hrzoft/screen5.png"],
+    desc: "ระบบบริหารพนักงาน android และ ios",
+    screenshots: [
+      "/app-hrzoft/thumbnail.png",
+      "/app-hrzoft/screen1.png",
+      "/app-hrzoft/screen2.png",
+      "/app-hrzoft/screen3.png",
+      "/app-hrzoft/screen4.png",
+      "/app-hrzoft/screen5.png",
+    ],
     androidUrl: "https://play.google.com/store/apps/details?id=com.codemobiles.hrzoft",
     iOSUrl: "https://apps.apple.com/th/app/hrzoft-human-resource/id1661499822",
   },
   {
     company: "cm",
     name: "Hrzoft",
-    thumbnail: "/hrzoft/thumbnail.png",
-    screenshots: ["/hrzoft/screen1.png", "/hrzoft/screen2.png", "/hrzoft/screen3.png"],
+    desc: "ระบบบริหารพนักงานแพลตฟอร์มเว็บไซต์",
+    screenshots: [
+      "/hrzoft/thumbnail.png",
+      "/hrzoft/screen1.png",
+      "/hrzoft/screen2.png",
+      "/hrzoft/screen3.png",
+    ],
     url: "https://hrzoft.com/th",
   },
   {
     company: "cm",
     name: "POSPOSCO",
-    thumbnail: "/posposco/thumbnail.png",
-    screenshots: ["/posposco/screen1.png", "/posposco/screen2.png", "/posposco/screen3.png", "/posposco/screen4.png"],
+    desc: "โปรแกรมขายหน้าร้าน POS",
+    screenshots: [
+      "/posposco/thumbnail.png",
+      "/posposco/screen1.png",
+      "/posposco/screen2.png",
+      "/posposco/screen3.png",
+      "/posposco/screen4.png",
+    ],
     url: "https://pospos.co",
   },
   {
     company: "cm",
-    name: "React Stock Material UI",
-    thumbnail: "/react-stock-mui/thumbnail.png",
+    name: "React Stock Material UI (JS)",
+    desc: "โปรแกรมสต๊อกสินค้า",
     screenshots: [
+      "/react-stock-mui/thumbnail.png",
       "/react-stock-mui/screen1.png",
       "/react-stock-mui/screen2.png",
       "/react-stock-mui/screen3.png",
@@ -98,8 +116,9 @@ export const portfolioes: Portfolio[] = [
   {
     company: "cm",
     name: "React (Typescript) Stock Material UI",
-    thumbnail: "/react-ts-stock-mui/thumbnail.png",
+    desc: "โปรแกรมสต๊อกสินค้า (TS)",
     screenshots: [
+      "/react-ts-stock-mui/thumbnail.png",
       "/react-ts-stock-mui/screen1.png",
       "/react-ts-stock-mui/screen2.png",
       "/react-ts-stock-mui/screen3.png",
@@ -114,23 +133,14 @@ export const portfolioes: Portfolio[] = [
   {
     company: "cm",
     name: "Science Week Information System",
-    thumbnail: "/science-week/thumbnail.png",
-    screenshots: ["/science-week/screen1.png", "/science-week/screen2.png", "/science-week/screen3.png", "/science-week/screen4.png", "/science-week/screen5.png"],
-  },
-  {
-    company: "cm",
-    name: "PHP-Stock",
-    thumbnail: "/php-stock/thumbnail.png",
+    desc: "ระบบสารสนเทศกิจกรรมสัปดาห์วิทยาศาสตร์แห่งชาติ",
     screenshots: [
-      "/php-stock/screen1.png",
-      "/php-stock/screen2.png",
-      "/php-stock/screen3.png",
-      "/php-stock/screen4.png",
-      "/php-stock/screen5.png",
-      "/php-stock/screen6.png",
-      "/php-stock/screen7.png",
-      "/php-stock/screen8.png",
-      "/php-stock/screen9.png",
+      "/science-week/thumbnail.png",
+      "/science-week/screen1.png",
+      "/science-week/screen2.png",
+      "/science-week/screen3.png",
+      "/science-week/screen4.png",
+      "/science-week/screen5.png",
     ],
   },
 ];
@@ -141,5 +151,5 @@ export interface Shareds {
 
 export const shareds = {
   resumeImg: "https://drive.google.com/file/d/1UAN3RP112t_pdIR8DNZSBFv0MXzQTHzQ/view?usp=sharing",
-  resumePDF: "https://drive.google.com/file/d/1IzVbGfTfmQq2g2rMY0-tUT4z6D688xS6/view?usp=sharing"
+  resumePDF: "https://drive.google.com/file/d/1IzVbGfTfmQq2g2rMY0-tUT4z6D688xS6/view?usp=sharing",
 };

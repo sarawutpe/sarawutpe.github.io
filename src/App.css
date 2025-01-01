@@ -42,12 +42,21 @@
   padding: 0 8px;
 }
 
+.headless-logo-bg {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right bottom, rgb(14, 165, 233), rgb(34, 211, 238));
+  color: transparent;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .headless-title::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 0;
-  width: 5px;
+  width: 4px;
   height: 90%;
   background: rgb(59 130 246);
   border-radius: 4px;
