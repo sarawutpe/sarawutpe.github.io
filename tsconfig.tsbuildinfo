@@ -1,0 +1,1 @@
+{"root":["./src/vite-env.d.ts","./src/utils/constants.ts","./src/main.tsx","./src/components/customdialog.tsx","./src/components/lightbox.tsx","./src/pages/app.tsx","./src/pages/homepage.tsx","./src/pages/portfoliopage.tsx","./src/pages/post.tsx"],"version":"5.7.2"}

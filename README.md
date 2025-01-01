@@ -1,4 +1,4 @@
 https://sarawutpe.github.io/
 
-$ npm run build
-$ npm run deploy
+- Deployment
+$ npm run build && npm run deploy
