@@ -25,8 +25,8 @@ const Lightbox: React.FC<LightboxProps> = ({ isOpen, onClose, onLoadimgId, title
     <div>
       <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={onClose}>
         {/* Nav */}
-        <div className="fixed w-full top-0 right-0 z-50">
-          <div className="flex justify-between items-center p-6">
+        <div className="fixed w-full top-0 right-0 z-50 bg-white">
+          <div className="flex justify-between items-center py-2 px-6">
             <DialogTitle className="text-lg font-medium text-gray-900">{title}</DialogTitle>
             <button
               onClick={onClose}
@@ -46,13 +46,13 @@ const Lightbox: React.FC<LightboxProps> = ({ isOpen, onClose, onLoadimgId, title
             </button>
           </div>
         </div>
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div className="fixed top-10 inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex h-auto items-center justify-center">
             <DialogPanel
               transition
               className="w-full h-full rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
             >
-              <div className="max-w-2xl mx-auto mt-2">
+              <div className="max-w-2xl mx-auto mt-4">
                 <div id="post-wrapper" className="scroll-smooth w-full h-full">
                   {imgs.map((img, index) => (
                     <div

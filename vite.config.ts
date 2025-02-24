@@ -5,8 +5,7 @@ import path from "node:path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "",
-  // base: "https://sarawutpe.github.io",
+  base: "./",
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "src/components"),

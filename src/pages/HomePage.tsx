@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
         <div className="block w-full bg-gray-600 p-4 lg:p-5 mb-2 lg:mb-6">
           <div className="flex flex-col justify-between lg:flex-row w-100 gap-6">
             <div className="flex flex-1 items-center lg:flex-row gap-4">
-              <img src="profile.jpg" alt="profile" className="w-20 h-20 rounded-full" />
+              <img src="profile.webp" alt="profile" className="w-20 h-20 rounded-full" />
               <div className="flex flex-1 flex-col gap-2">
                 <h3 className="text-2xl text-white font-semibold tracking-tight">
                   <Typewriter
@@ -171,13 +171,13 @@ const HomePage: React.FC = () => {
               <div className="flex w-full max-w-[600px]">
                 <Swiper style={{ width: "100%", height: "100%" }} pagination={{ clickable: true }} modules={[Pagination, Autoplay]} autoplay={{ delay: 3000 }} loop={true}>
                   <SwiperSlide>
-                    <img src="company-cv.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                    <img src="company-cv.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="company-cv-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                    <img src="company-cv-2.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="company-cv-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                    <img src="company-cv-3.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -217,17 +217,17 @@ const HomePage: React.FC = () => {
                 <Swiper style={{ width: "100%", height: "100%" }} pagination={{ clickable: true }} modules={[Pagination, Autoplay]} autoplay={{ delay: 3000 }} loop={true}>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <img src="company-cm.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                      <img src="company-cm.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <img src="company-cm-2.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                      <img src="company-cm-2.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="overflow-hidden">
-                      <img src="company-cm-3.png" alt="company" className="hover:scale-110 transition-all duration-300" />
+                      <img src="company-cm-3.webp" alt="company" className="hover:scale-110 transition-all duration-300" />
                     </div>
                   </SwiperSlide>
                 </Swiper>
