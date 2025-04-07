@@ -26,9 +26,6 @@ export const frameworkStacks: Devicons[] = [
   { iconName: "devicon-codeigniter-plain", name: "CodeIgniter" },
   { iconName: "devicon-tailwindcss-original", name: "Tailwind CSS" },
   { iconName: "devicon-bootstrap-plain", name: "Bootstrap" },
-  { iconName: "", name: "" },
-  { iconName: "", name: "" },
-  { iconName: "", name: "" },
 ];
 
 export const databaseStacks: Devicons[] = [
@@ -157,7 +154,7 @@ export const portfolioes: Portfolio[] = [
       "/cv/cityvariety-landingpage/thumbnail.webp",
       "/cv/cityvariety-landingpage/screenshot1.webp",
     ],
-    url: "https://www.cityvariety.co.th/landingpage/",
+    url: "https://www.cityvariety.co.th/",
   },
   {
     company: "cv",
@@ -428,6 +425,6 @@ export interface Shareds {
 }
 
 export const shareds = {
-  resumeImg: "https://drive.google.com/file/d/1UAN3RP112t_pdIR8DNZSBFv0MXzQTHzQ/view?usp=sharing",
-  resumePDF: "https://drive.google.com/file/d/1IzVbGfTfmQq2g2rMY0-tUT4z6D688xS6/view?usp=sharing",
+  resumeImg: "/my/cv-sarawut c.jpg",
+  resumePDF: "/my/cv-sarawut c.pdf",
 };
