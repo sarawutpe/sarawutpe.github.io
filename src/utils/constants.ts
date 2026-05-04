@@ -425,6 +425,6 @@ export interface Shareds {
 }
 
 export const shareds = {
-  resumeImg: "/my/cv-sarawut c.jpg",
-  resumePDF: "/my/cv-sarawut c.pdf",
+  resumeImg: "/my/Sarawut C - CV.png",
+  resumePDF: "/my/Sarawut C - CV.pdf",
 };

@@ -277,7 +277,7 @@ const HomePage: React.FC = () => {
       </div>
       <CustomDialog isOpen={isOpen} onClose={toggleDialog} title="Resume">
         <div className="w-full h-[80vh]">
-          <iframe src="https://drive.google.com/file/d/1UAN3RP112t_pdIR8DNZSBFv0MXzQTHzQ/preview" width="100%" height="100%" allow="autoplay"></iframe>
+          <iframe src={shareds.resumePDF} width="100%" height="100%" allow="autoplay"></iframe>
         </div>
       </CustomDialog>
     </>
